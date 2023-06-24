@@ -1,6 +1,62 @@
+### Enable [NSFW](https://github.com/zedeus/nitter/issues/829)
+
+> How does the workaround… work? Whose credentials are used?
+
+
+The administrator of the respective instance needs to create a Twitter account, sign in and then put their session information into Nitter's configuration file. This session information will then basically be shared for all users. It's the instance's Twitter account, if you will.
+
+
+### How to find the ct0 and auth token?
+
+Right click and click developer mode or press F12 and click the tab that says "Network". Then find your twitter account username, usually at the top and click "Cookies".
+![](https://bffr.wtf/r/D0vVCa.jpg?compress=true)
+
+### How to find the xCsrfToken?
+
+Right click and click developer mode or press F12 and click the tab that says "Network". Then in the filter type, "api".
+![](https://bffr.wtf/r/pXP3Qp.jpg?compress=true)
+
+As an end user, you shouldn't need to do anything.
+
+## Security Audits:
+
+- [Internet.nl](https://internet.nl/site/tweet.whateveritworks.org/2060148/)
+- [HSTS Preload](https://hstspreload.org/)
+- [SSL Labs](https://www.ssllabs.com/ssltest/analyze.html?d=tweet.whateveritworks.org)
+- [Security Headers](https://securityheaders.com/?q=tweet.whateveritworks.org&hide=on&followRedirects=on)
+- [pagespeed](https://pagespeed.web.dev/)
+- [webbkoll](https://webbkoll.dataskydd.net/en)
+- [ImmuniWeb](https://www.immuniweb.com/ssl/tweet.whateveritworks.org/uLlrAeMb/)
+- [Hardenize](https://www.hardenize.com/report/tweet.whateveritworks.org/1686343966)
+- [Mozilla.org](https://observatory.mozilla.org/)
+- [report-uri.com](https://report-uri.com/home/tools)
+- [check-your-website.server-daten.de](https://check-your-website.server-daten.de/?q=tweet.whateveritworks.org)
+- [csp-evaluator.withgoogle.com](https://csp-evaluator.withgoogle.com/)
+- [OpenWPM](https://github.com/openwpm/OpenWPM)
+- [privacyscore.org](https://privacyscore.org)
+
+## Usage:
+
+1. Buy [Hetzner.com](https://hetzner.com) it's 100% renewal hardware and you get affordable dedicated servers, and you also help save the world.
+
+2. Get [Cloudflare](https://cloudflare.com) it's carbon renewal and you help save the world.
+
+3. ```apt install git```
+
+4. ```git clone https://github.com/WhateverItWorks/my-nitter-docker-compose.git nitter```
+
+5. ```nano nitter.conf```
+
+6. ```nano docker-compose.yml```
+
+7. ```docker-compose up -d```
+
+```http://localhost:8012```
+
 # Nitter
 
-[![Test Matrix](https://github.com/zedeus/nitter/workflows/CI/CD/badge.svg)](https://github.com/zedeus/nitter/actions?query=workflow%3ACI/CD)
+[![Test Matrix](https://github.com/zedeus/nitter/workflows/Tests/badge.svg)](https://github.com/zedeus/nitter/actions/workflows/run-tests.yml)
+[![Test Matrix](https://github.com/zedeus/nitter/workflows/Docker/badge.svg)](https://github.com/zedeus/nitter/actions/workflows/build-docker.yml)
 [![License](https://img.shields.io/github/license/zedeus/nitter?style=flat)](#license)
 
 A free and open source alternative Twitter front-end focused on privacy and
