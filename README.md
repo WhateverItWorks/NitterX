@@ -49,7 +49,7 @@ As an end user, you shouldn't need to do anything.
 
 6. ```nano docker-compose.yml```
 
-7. ```docker-compose up -d```
+7. ```docker-compose up -d --build```
 
 ```http://localhost:8012```
 
