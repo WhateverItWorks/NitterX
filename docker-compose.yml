@@ -36,7 +36,7 @@ services:
     hostname: nitter-redis
     command: redis-server --save 60 1 --loglevel warning
     volumes:
-      - nitter-redis:/data
+      - ./nitter-redis:/data
     restart: always
     healthcheck:
       test: redis-cli ping
