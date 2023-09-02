@@ -1,14 +1,10 @@
 version: "3.7"
 
 services:
-
   nitter:
-    #build from source, incase repo goes down or for developer testing purposes
     build:
       context: .
       dockerfile: Dockerfile
-    #image: zedeus/nitter:latest # official image
-    #image: ghcr.io/privacydevel/nitter:master # Unofficial docker image supports nsfw #Check out the commits: https://github.com/PrivacyDevel/nitter/commits/master
     container_name: nitter
     hostname: nitter
     ports:
