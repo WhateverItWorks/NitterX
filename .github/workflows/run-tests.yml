@@ -32,7 +32,7 @@ jobs:
       - run: nimble build -d:release -Y
       - run: pip install seleniumbase
       - run: seleniumbase install chromedriver
-      - uses: supercharge/redis-github-action@1.6.0
+      - uses: supercharge/redis-github-action@1.7.0
       - name: Prepare Nitter
         run: |
           sudo apt install libsass-dev -y
