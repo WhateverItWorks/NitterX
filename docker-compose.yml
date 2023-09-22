@@ -2,15 +2,14 @@ version: "3.7"
 
 services:
   nitter:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/privacydevel/nitter:master
     container_name: nitter
     hostname: nitter
     ports:
       - '127.0.0.1:8012:8080'
     volumes:
       - ./nitter.conf:/src/nitter.conf:Z,ro
+      - ./guest_accounts.json:/src/guest_accounts.json:Z,ro
     depends_on:
       - nitter-redis
     restart: always
